@@ -47,3 +47,27 @@
 - [x] **3.** Ejecutar la sentencia `CREATE TRIGGER` y verificar la reactividad ante eventos DML (INSERT, UPDATE o DELETE).
 
 ---
+
+### parte 3
+
+Este proyecto implementa un sistema de gestión logística con base de datos relacional en PostgreSQL y una capa de caché en memoria utilizando Redis.
+
+El objetivo principal es optimizar el rendimiento de consultas frecuentes mediante el patrón Cache-Aside (Lazy Loading), reduciendo la carga sobre la base de datos principal.
+
+Tecnologías utilizadas
+Node.js
+Express.js
+PostgreSQL
+Redis (Docker)
+pg (cliente PostgreSQL)
+redis (cliente Node.js)
+
+El sistema sigue el patrón:
+
+El backend recibe una solicitud
+Busca el dato en Redis
+Si existe (CACHE HIT) → responde inmediatamente
+Si no existe (CACHE MISS):
+consulta PostgreSQL
+guarda resultado en Redis
+devuelve respuesta al cliente
