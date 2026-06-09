@@ -71,3 +71,7 @@ Si no existe (CACHE MISS):
 consulta PostgreSQL
 guarda resultado en Redis
 devuelve respuesta al cliente
+
+### Parte 4 – Arquitectura Híbrida e Integración
+
+En esta etapa se desarrolló una API REST completa para el sistema de logística, implementando operaciones CRUD sobre PostgreSQL y asegurando la consistencia de datos mediante Redis como capa de caché. Se aplicó el patrón Cache-Aside para mejorar el rendimiento de las consultas, junto con invalidación selectiva de caché ante cambios en la base de datos. La API fue validada utilizando Postman como herramienta de pruebas.
